@@ -225,6 +225,7 @@ document.getElementById("isVulgar").addEventListener("change", vulgar_func1);
 
 function vulgar_func1() {
   if (document.getElementById("isVulgar").checked) {
+    document.getElementById("isVulgar2").checked = true;
     document.querySelector("#pic0").src = "assets/images/vulgar/dore_tp.gif";
     document.querySelector("#pic1").src = "assets/images/vulgar/dore_tp.gif";
     document.querySelector("#pic2").src = "assets/images/vulgar/dore_tp.gif";
@@ -232,6 +233,7 @@ function vulgar_func1() {
     document.querySelector("#pic4").src = "assets/images/vulgar/dore_tp.gif";
     document.querySelector("#pic5").src = "assets/images/vulgar/dore_tp.gif";
   } else {
+    document.getElementById("isVulgar2").checked = false;
     document.querySelector("#pic0").src = "assets/images/clean/Stalker.jpg";
     document.querySelector("#pic1").src = "assets/images/clean/Stalker.jpg";
     document.querySelector("#pic2").src = "assets/images/clean/Stalker.jpg";
@@ -245,18 +247,20 @@ document.getElementById("isVulgar2").addEventListener("change", vulgar_func2);
 
 function vulgar_func2() {
   if (document.getElementById("isVulgar2").checked) {
-    document.querySelector("#pic1").src = "assets/images/vulgar/Cursing.gif";
-    document.querySelector("#pic2").src = "assets/images/vulgar/Smoking.gif";
-    document.querySelector("#pic3").src = "assets/images/vulgar/Drinking.gif";
-    document.querySelector("#pic4").src = "assets/images/vulgar/Riding.gif";
-    document.querySelector("#pic5").src = "assets/images/vulgar/Women.gif";
-    document.querySelector("#pic6").src = "assets/images/vulgar/Dahmer.gif";
+    document.getElementById("isVulgar").checked = true;
+    document.querySelector("#pic0").src = "assets/images/vulgar/dore_tp.gif";
+    document.querySelector("#pic1").src = "assets/images/vulgar/dore_tp.gif";
+    document.querySelector("#pic2").src = "assets/images/vulgar/dore_tp.gif";
+    document.querySelector("#pic3").src = "assets/images/vulgar/dore_tp.gif";
+    document.querySelector("#pic4").src = "assets/images/vulgar/dore_tp.gif";
+    document.querySelector("#pic5").src = "assets/images/vulgar/dore_tp.gif";
   } else {
-    document.querySelector("#pic1").src = "assets/images/clean/Cursing.gif";
-    document.querySelector("#pic2").src = "assets/images/clean/Smoking.gif";
-    document.querySelector("#pic3").src = "assets/images/clean/Drinking.gif";
-    document.querySelector("#pic4").src = "assets/images/clean/Riding.gif";
-    document.querySelector("#pic5").src = "assets/images/clean/Women.gif";
-    document.querySelector("#pic6").src = "assets/images/clean/Dahmer.gif";
+    document.getElementById("isVulgar").checked = false;
+    document.querySelector("#pic0").src = "assets/images/clean/Stalker.jpg";
+    document.querySelector("#pic1").src = "assets/images/clean/Stalker.jpg";
+    document.querySelector("#pic2").src = "assets/images/clean/Stalker.jpg";
+    document.querySelector("#pic3").src = "assets/images/clean/Stalker.jpg";
+    document.querySelector("#pic4").src = "assets/images/clean/Stalker.jpg";
+    document.querySelector("#pic5").src = "assets/images/clean/Stalker.jpg";
   }
 }

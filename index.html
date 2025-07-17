@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <title>Happy Birthday!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <audio id="song" loop>
+      <source src="assets/audio/Birthday_Song.mp3" type="audio/mp3" />
+    </audio>
+
+    <div class="pageDiv" id="landing">
+      <h1>Click on Screen!</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+    <div class="pageDiv" id="greeting">
+      <h1>Happy Birthday!</h1>
+      <h3>Scroll Down</h3>
+    </div>
+
+    <div class="switchDiv">
+      <div class="switchBar">
+        <span class="switchSpan">
+          <label for="isVulgar">Clean</label>
+          <label class="switch">
+            <input id="isVulgar" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <label for="isVulgar">Vulgar</label>
+        </span>
+
+        <span class="switchSpan">
+          <label for="isDark">Dark</label>
+          <label class="switch">
+            <input id="isDark" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <label for="isDark">Light</label>
+        </span>
+      </div>
+
+      <div class="dropList">
+        <center>
+          <div class="setBtnDiv">
+            <img id="arrow" src="assets/images/triangle-dark.png" alt="arrow" />
+            <button class="dropbtn">Settings</button>
+          </div>
+
+          <div class="dropListContent">
+            <span class="switchSpan" id="dropSpan1">
+              <label for="isVulgar2">Clean</label>
+              <label class="switch">
+                <input id="isVulgar2" type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <label for="isVulgar2">Vulgar</label>
+            </span>
+
+            <span class="switchSpan">
+              <label for="isDark2">Dark</label>
+              <label class="switch">
+                <input id="isDark2" type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <label for="isDark2">Light</label>
+            </span>
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <div id="cards">
+      <div class="card card_odd" id="card0">
+        <img
+          id="pic0"
+          class="pics"
+          src="assets/images/clean/Stalker.jpg"
+          alt="placeholder image"
+        />
+
+        <span class="sub_container">
+          <h2>Place holder heading</h2>
+          <p class="par p_odd">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            placeat, expedita at aperiam nam aliquid quibusdam soluta enim
+            omnis, fuga impedit temporibus minus corrupti consequatur et
+            architecto adipisci in voluptatum.
+          </p>
+        </span>
+      </div>
+
+      <div class="card card_even" id="card1">
+        <img
+          id="pic1"
+          class="pics"
+          src="assets/images/clean/Stalker.jpg"
+          alt="placeholder image"
+        />
+
+        <span class="sub_container">
+          <h2>Place holder heading</h2>
+          <p class="par p_even">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            placeat, expedita at aperiam nam aliquid quibusdam soluta enim
+            omnis, fuga impedit temporibus minus corrupti consequatur et
+            architecto adipisci in voluptatum.
+          </p>
+        </span>
+      </div>
+
+      <div class="card card_odd" id="card2">
+        <img
+          id="pic2"
+          class="pics"
+          src="assets/images/clean/Stalker.jpg"
+          alt="placeholder image"
+        />
+
+        <span class="sub_container">
+          <h2>Place holder heading</h2>
+          <p class="par p_odd">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            placeat, expedita at aperiam nam aliquid quibusdam soluta enim
+            omnis, fuga impedit temporibus minus corrupti consequatur et
+            architecto adipisci in voluptatum.
+          </p>
+        </span>
+      </div>
+
+      <div class="card card_even" id="card3">
+        <img
+          id="pic3"
+          class="pics"
+          src="assets/images//clean/Stalker.jpg"
+          alt="placeholder image"
+        />
+
+        <span class="sub_container">
+          <h2>Place holder heading</h2>
+          <p class="par p_even">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            placeat, expedita at aperiam nam aliquid quibusdam soluta enim
+            omnis, fuga impedit temporibus minus corrupti consequatur et
+            architecto adipisci in voluptatum.
+          </p>
+        </span>
+      </div>
+
+      <div class="card card_odd" id="card4">
+        <img
+          id="pic4"
+          class="pics"
+          src="assets/images/clean/Stalker.jpg"
+          alt="placeholder image"
+        />
+
+        <span class="sub_container">
+          <h2>Place holder heading</h2>
+          <p class="par p_odd">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            placeat, expedita at aperiam nam aliquid quibusdam soluta enim
+            omnis, fuga impedit temporibus minus corrupti consequatur et
+            architecto adipisci in voluptatum.
+          </p>
+        </span>
+      </div>
+
+      <div class="card card_even" id="card5">
+        <img
+          id="pic5"
+          class="pics"
+          src="assets/images//clean/Stalker.jpg"
+          alt="placeholder image"
+        />
+
+        <span class="sub_container">
+          <h2>Place holder heading</h2>
+          <p class="par p_even">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            placeat, expedita at aperiam nam aliquid quibusdam soluta enim
+            omnis, fuga impedit temporibus minus corrupti consequatur et
+            architecto adipisci in voluptatum.
+          </p>
+        </span>
+      </div>
+
+      <div class="card card_odd" id="card6">
+        <img
+          id="pic6"
+          class="pics"
+          src="assets/images/BehindTheScenes.png"
+          alt="placeholder image"
+        />
+
+        <span class="sub_container">
+          <h2>Credits</h2>
+          <p class="par p_odd">
+            Creative Director: Damascus Bartholomew III
+            <br />
+            Web Developer: Osama's Llama <br />
+            Check out the process of making this website:
+            <a href="https://www.youtube.com/@tanmayta9131">
+              Stalking the Stalker (Behind the Scenes)</a
+            >
+            <br />
+            Website's source code is hosted on
+            <a href="https://github.com/Speedbird-One/Stalking-the-Stalker"
+              >my GitHub Repo</a
+            >.
+          </p>
+        </span>
+      </div>
+
+      <div style="height: 22.5vh"></div>
+    </div>
+
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>

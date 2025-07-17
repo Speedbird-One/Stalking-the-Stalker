@@ -1,0 +1,431 @@
+:root {
+  --fg-clr: hsl(0, 0%, 90%);
+  --bg-clr: hsl(200, 100%, 5%);
+  --bg-lgt: hsl(205, 75%, 20%);
+  --btn-clr: hsl(205, 90%, 55%);
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background-color: var(--bg-clr);
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Patrick Hand", sans-serif;
+  color: var(--fg-clr);
+  font-size: 5em;
+
+  text-align: center;
+  margin-inline: 1em;
+}
+
+h3 {
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 2em;
+  color: var(--fg-clr);
+
+  padding: 0px;
+  padding-top: 90vh;
+  margin: 0px;
+}
+
+label {
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--fg-clr);
+
+  margin: 0.25em;
+  cursor: pointer;
+}
+
+.pageDiv {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+}
+
+#greeting > h1 {
+  position: absolute;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(0, 0%, 50%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--btn-clr);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--btn-clr);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switchDiv {
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  padding-block: 10px;
+  z-index: 1;
+  background-color: var(--bg-clr);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.switchBar {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dropList {
+  width: 100%;
+  /* padding-block: 10px; */
+  display: none;
+}
+
+.setBtnDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#arrow {
+  height: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+  transition: 0.25s;
+  align-self: flex-start;
+}
+
+.dropList:hover #arrow {
+  transform: rotate(0.25turn);
+}
+
+.dropbtn {
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+
+  color: var(--fg-clr);
+  background-color: var(--bg-clr);
+  border: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropListContent {
+  display: none;
+  position: absolute;
+  background-color: var(--bg-clr);
+  z-index: 1;
+  width: 100%;
+}
+
+/* Show the dropdown menu on hover */
+.dropList:hover .dropListContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.switchSpan {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#dropSpan1 {
+  padding-left: 10px;
+}
+
+.pics {
+  max-width: min(calc(100% - 60px), 405px);
+  margin: 10px;
+  border-radius: 10px;
+
+  scale: 0.5;
+  opacity: 0;
+
+  animation: card-in ease-in-out both, content-out ease-in-out both;
+  animation-timeline: view(), view();
+  animation-range: entry 10vh, exit -20vh;
+}
+
+h2 {
+  font-family: "Patrick Hand", sans-serif;
+  color: var(--fg-clr);
+  font-size: 2.5em;
+
+  text-align: center;
+  margin-top: 10px;
+
+  scale: 0.5;
+  opacity: 0;
+
+  animation: card-in ease-in-out both, content-out ease-in-out both;
+  animation-timeline: view(), view();
+  animation-range: entry 10vh, exit -20vh;
+}
+
+a {
+  color: hsl(195, 50%, 80%);
+}
+
+.par {
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 1.75em;
+  color: var(--fg-clr);
+
+  text-align: justify;
+  margin-inline: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  max-width: calc(100% - 60px);
+
+  scale: 0.5;
+  opacity: 0;
+
+  animation: card-in ease-in-out both, content-out ease-in-out both;
+  animation-timeline: view(), view();
+  animation-range: entry 10vh, exit -20vh;
+}
+
+#cards {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+#card0 {
+  margin-top: 245px;
+}
+
+.card {
+  max-width: 1200px;
+  margin-inline: 12px;
+  margin-block: 12vh;
+  border-radius: 20px;
+  background-color: var(--bg-lgt);
+
+  display: flex;
+  align-items: center;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+
+  scale: 0.75;
+  opacity: 0.25;
+
+  animation: card-in ease-in-out both, card-out ease-in-out both;
+  animation-timeline: view(), view();
+  animation-range: entry, exit;
+}
+
+@keyframes card-in {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes card-out {
+  to {
+    scale: 0.75;
+    opacity: 0.25;
+  }
+}
+
+@keyframes content-out {
+  to {
+    scale: 0.5;
+    opacity: 0;
+  }
+}
+
+.card_even {
+  flex-direction: row-reverse;
+  justify-content: end;
+}
+
+.p_odd {
+  margin-left: 0px;
+}
+
+.p_even {
+  margin-right: 0px;
+}
+
+.sub_container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+@media screen and (880px > width > 480px) {
+  h2 {
+    margin: auto;
+  }
+
+  .pics {
+    margin-top: 30px;
+  }
+
+  .switchDiv {
+    margin-block: 2vh;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .par {
+    margin: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (880px > width > 480px) and (aspect-ratio >= 9/17) {
+  .card {
+    margin-block: 2vh;
+  }
+}
+
+@media screen and (width < 680px) {
+  #landing > h1 {
+    line-height: 1;
+  }
+
+  .dropList {
+    display: flow-root;
+  }
+
+  .switchBar {
+    display: none;
+  }
+}
+
+@media screen and (width <= 480px) {
+  label {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    margin: auto;
+    font-size: 2em;
+  }
+
+  .pics {
+    margin-top: 30px;
+  }
+
+  #dropSpan1 {
+    padding-left: 5px;
+  }
+
+  .switchDiv {
+    padding-block: 0px;
+    margin-block: 2vh;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .par {
+    margin: 10px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (width <= 480px) and (aspect-ratio >= 9/17) {
+  .card {
+    margin-block: 2vh;
+  }
+}
+
+@media screen and (width <= 480px) and (height < 750px) {
+  .switchDiv {
+    padding-block: 0px;
+    margin: 0px;
+  }
+}
+
+@media screen and (width <= 480px) and (height < 750px) and (aspect-ratio >= 9/17) {
+  .card {
+    margin-block: 0.5vh;
+  }
+}
+
+@media screen and (aspect-ratio < 9/17) {
+  .card {
+    margin-block: 5vh;
+  }
+}

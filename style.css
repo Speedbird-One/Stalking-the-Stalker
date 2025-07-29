@@ -57,7 +57,6 @@ label {
   position: absolute;
 }
 
-/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -65,14 +64,12 @@ label {
   height: 34px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -111,7 +108,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -178,7 +174,6 @@ input:checked + .slider:before {
   border: none;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropListContent {
   display: none;
   position: absolute;
@@ -187,7 +182,6 @@ input:checked + .slider:before {
   width: 100%;
 }
 
-/* Show the dropdown menu on hover */
 .dropList:hover .dropListContent {
   display: flex;
   flex-direction: column;
@@ -233,8 +227,13 @@ h2 {
   animation-range: entry 10vh, exit -20vh;
 }
 
+#head0 {
+  font-size: 4rem;
+  margin: auto;
+}
+
 a {
-  color: hsl(195, 50%, 80%);
+  color: hsl(195, 50%, 70%);
 }
 
 .par {
@@ -321,16 +320,31 @@ a {
   margin-right: 0px;
 }
 
+#credits {
+  text-align: left;
+}
+
 .sub_container {
   display: flex;
   flex-direction: column;
 
   align-items: center;
+  margin-inline: auto;
+}
+
+@media screen and (width > 1000px) {
+  #credits {
+    max-width: fit-content;
+  }
 }
 
 @media screen and (880px > width > 480px) {
   h2 {
     margin: auto;
+  }
+
+  #head0 {
+    margin-bottom: 30px;
   }
 
   .pics {
@@ -379,6 +393,11 @@ a {
   h2 {
     margin: auto;
     font-size: 2em;
+  }
+
+  #head0 {
+    margin-bottom: 30px;
+    font-size: 2.25rem;
   }
 
   .pics {
